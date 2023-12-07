@@ -11,7 +11,7 @@ body, html {
     height: 100%;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 300px 4fr;
+    grid-template-columns: auto 4fr;
     grid-template-rows: auto 4fr;
 }
 
@@ -151,7 +151,14 @@ body, html {
     background-color: #E2E8F0;
     grid-column: 2 / 3;
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template: 1fr 1fr / 3fr 1fr;
+    padding: 2rem;
+    padding-bottom: 53.28px;
+    gap: 2rem;
+}
+
+.main p:nth-of-type(2) {
+    color: #636363;
 }
 
 .main p {
@@ -167,15 +174,19 @@ body, html {
     background-color: #E2E8F0;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    padding: 1rem;
     display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr;
-    gap: 1rem;
-    
+    grid-template-rows: auto 1fr;
 }
 
-.projects > h4 {
-    grid-column: 1 / 3;
+.main h4 {
+    font-size: 1.3rem;
+}
+
+.projects .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    
 }
 
 .projects .card {
@@ -205,16 +216,16 @@ body, html {
 .announcements {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 .announcements .card {
-    background-color: white;
     padding: 1rem;
+    background-color: white;
     border-radius: 13px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    gap: 1rem;
 }
 
 .announcements .title {
@@ -227,15 +238,14 @@ body, html {
 }
 
 .trending {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 13px;
-    margin: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 .trending .card {
     background-color: white;
     padding: 1rem;
+    padding-right: 0;
     border-radius: 13px;
     display: grid;
     gap: 1rem;
